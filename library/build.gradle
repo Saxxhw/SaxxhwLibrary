@@ -3,9 +3,6 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
-apply plugin: 'com.github.dcendents.android-maven'
-group = 'com.github.icodeu'
-
 android {
     compileSdkVersion 26
 
@@ -41,3 +38,6 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:4.3.1'
     kapt 'com.github.bumptech.glide:compiler:4.3.1'
 }
+
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.icodeu'

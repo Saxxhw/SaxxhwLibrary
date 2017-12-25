@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">Library</string>
+    <!-- 数据加载状态 -->
+    <string name="state_loading_message">努力加载中</string>
+    <string name="state_loading_desc">请您耐心等候</string>
+    <string name="state_error_message">暂无网络</string>
+    <string name="state_error_desc">请检查手机网络是否连接</string>
+    <string name="state_empty_message">暂无数据</string>
+    <string name="state_empty_desc">轻触屏幕刷新</string>
 </resources>
