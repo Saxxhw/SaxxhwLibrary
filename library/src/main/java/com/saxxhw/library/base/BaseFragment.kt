@@ -18,16 +18,13 @@ import java.lang.RuntimeException
 
 abstract class BaseFragment : Fragment() {
 
-    private lateinit var mView: View
-
+    // 状态布局
     private var mStateLayout: StateLayout? = null
-
+    // 加载对话框
     private var mProgressDialog: KProgressHUD? = null
 
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        mView = inflater.inflate(getLayout(), null)
-        return mView
+        return inflater.inflate(getLayout(), null)
     }
 
 
