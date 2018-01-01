@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="array_order_filter_title">
+        <!--<item>故障级别</item>-->
+        <item>发生时间</item>
+        <item>处理状态</item>
+    </string-array>
+
+    <!-- 故障级别 -->
+    <string-array name="array_order_level">
+        <item>不限</item>
+        <item>停机</item>
+        <item>警示</item>
+        <item>提示</item>
+    </string-array>
+
+    <!-- 发生时间 -->
+    <string-array name="array_order_occurrence_time">
+        <item>不限</item>
+        <item>1天内</item>
+        <item>1–3天</item>
+        <item>3天以上</item>
+    </string-array>
+
+    <!-- 处理状态 -->
+    <string-array name="array_order_processing_state">
+        <item>不限</item>
+        <item>未处理</item>
+        <item>处理中</item>
+        <item>已完成</item>
+    </string-array>
+
+    <!-- 故障级别-文案 -->
+    <string-array name="fault_level_text">
+        <item>停机</item>       <!-- 停机-1 -->
+        <item>警示</item>    <!-- 警示-2 -->
+        <item>提示</item>     <!-- 提示-3 -->
+    </string-array>
+
+    <!-- 工单处理状态 -->
+    <array name="order_state">
+        <item>未处理</item>     <!-- 未处理-0 -->
+        <item>处理中</item>    <!-- 处理中-1 -->
+        <item>已处理</item>  <!-- 已处理-2 -->
+    </array>
+
+    <!-- 故障级别-颜色 -->
+    <array name="fault_level_color">
+        <item>@color/Cr_B3FA6261</item> <!-- 停机-1 -->
+        <item>@color/Cr_B3FFD800</item> <!-- 警示-2 -->
+        <item>@color/Cr_B3008EFF</item> <!-- 提示-3 -->
+    </array>
+
+    <!-- 工单参与人角色 -->
+    <array name="order_members_role">
+        <item />
+        <item>负责人</item>
+        <item>参与人</item>
+        <item>发起人</item>
+    </array>
+
+    <!-- 充值渠道 -->
+    <array name="array_recharge_channel">
+        <item />
+        <item>支付宝电脑网页版</item>
+        <item>支付宝手机网页版</item>
+        <item>银联企业网银支付</item>
+        <item>银联手机网页支付</item>
+        <item>银联网关支付</item>
+    </array>
+
+    <!-- 充值状态 -->
+    <array name="array_recharge_state">
+        <item />
+        <item>成功</item>
+        <item>充值中</item>
+    </array>
+</resources>

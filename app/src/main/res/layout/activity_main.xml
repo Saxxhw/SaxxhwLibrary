@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical"
     tools:context="com.saxxhw.MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <com.saxxhw.library.widget.dropdown.DropDownMenu
+        android:id="@+id/dropDownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:dddividerColor="@android:color/transparent"
+        app:ddmenuBackgroundColor="@android:color/white"
+        app:ddmenuMenuHeightPercent="0.5"
+        app:ddmenuSelectedIcon="@mipmap/drop_down_selected_icon"
+        app:ddmenuTextSize="14sp"
+        app:ddmenuUnselectedIcon="@mipmap/drop_down_unselected_icon"
+        app:ddtextSelectedColor="@color/Cr_FF008EFF"
+        app:ddtextUnselectedColor="@color/Cr_FF444445"
+        app:ddunderlineColor="@color/Cr_FFEEEEEE" />
 </LinearLayout>

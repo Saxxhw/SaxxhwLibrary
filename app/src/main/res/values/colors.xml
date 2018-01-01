@@ -3,4 +3,82 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!-- 背景色 -->
+    <color name="background_color">@color/Cr_FFF6F6F6</color>
+
+    <!-- 白色 -->
+    <color name="alpha_05_white">#0DFFFFFF</color>
+    <color name="alpha_10_white">#1AFFFFFF</color>
+    <color name="alpha_15_white">#26FFFFFF</color>
+    <color name="alpha_20_white">#33FFFFFF</color>
+    <color name="alpha_25_white">#40FFFFFF</color>
+    <color name="alpha_30_white">#4DFFFFFF</color>
+    <color name="alpha_35_white">#59FFFFFF</color>
+    <color name="alpha_40_white">#66FFFFFF</color>
+    <color name="alpha_45_white">#73FFFFFF</color>
+    <color name="alpha_50_white">#80FFFFFF</color>
+    <color name="alpha_55_white">#8CFFFFFF</color>
+    <color name="alpha_60_white">#99FFFFFF</color>
+    <color name="alpha_65_white">#A6FFFFFF</color>
+    <color name="alpha_70_white">#B3FFFFFF</color>
+    <color name="alpha_75_white">#BFFFFFFF</color>
+    <color name="alpha_80_white">#CCFFFFFF</color>
+    <color name="alpha_85_white">#D9FFFFFF</color>
+    <color name="alpha_90_white">#E6FFFFFF</color>
+    <color name="alpha_95_white">#F2FFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- 黑色 -->
+    <color name="alpha_05_black">#0D000000</color>
+    <color name="alpha_10_black">#1A000000</color>
+    <color name="alpha_15_black">#26000000</color>
+    <color name="alpha_20_black">#33000000</color>
+    <color name="alpha_25_black">#40000000</color>
+    <color name="alpha_30_black">#4D000000</color>
+    <color name="alpha_35_black">#59000000</color>
+    <color name="alpha_40_black">#66000000</color>
+    <color name="alpha_45_black">#73000000</color>
+    <color name="alpha_50_black">#80000000</color>
+    <color name="alpha_55_black">#8C000000</color>
+    <color name="alpha_60_black">#99000000</color>
+    <color name="alpha_65_black">#A6000000</color>
+    <color name="alpha_70_black">#B3000000</color>
+    <color name="alpha_75_black">#BF000000</color>
+    <color name="alpha_80_black">#CC000000</color>
+    <color name="alpha_85_black">#D9000000</color>
+    <color name="alpha_90_black">#E6000000</color>
+    <color name="alpha_95_black">#F2000000</color>
+    <color name="black">#FF000000</color>
+
+    <color name="CR_FF32D554">#FF32D554</color>
+    <color name="CR_FFA6CD7D">#FFA6CD7D</color>
+    <color name="CR_FFD81E06">#FFD81E06</color>
+    <color name="CR_FFFF3B3B">#FFFF3B3B</color>
+    <color name="CR_FFFE4828">#FFFE4828</color>
+    <color name="Cr_B3FA6261">#B3FA6261</color>
+    <color name="CR_FFD29316">#FFD29316</color>
+    <color name="CR_FFFCB018">#FFFCB018</color>
+    <color name="CR_FFFFB901">#FFFFB901</color>
+    <color name="Cr_B3FFD800">#B3FFD800</color>
+    <color name="CR_4DFFB901">#4DFFB901</color>
+    <color name="Cr_FF0162AE">#FF0162AE</color>
+    <color name="CR_FF0162AE">#FF0162AE</color>
+    <color name="Cr_FF0A6CE7">#FF0A6CE7</color>
+    <color name="Cr_FF0277EB">#FF0277EB</color>
+    <color name="Cr_FF177DFD">#FF177DFD</color>
+    <color name="Cr_FF008EFF">#FF008EFF</color>
+    <color name="Cr_B3008EFF">#B3008EFF</color>
+    <color name="Cr_FF444445">#FF444445</color>
+    <color name="CR_FF474747">#FF474747</color>
+    <color name="CR_FF656565">#FF656565</color>
+    <color name="Cr_FF757575">#FF757575</color>
+    <color name="Cr_FF919191">#FF919191</color>
+    <color name="Cr_FFAAAAAA">#FFAAAAAA</color>
+    <color name="CR_FFC2C1C1">#FFC2C1C1</color>
+    <color name="CR_FFC0BFBE">#FFC0BFBE</color>
+    <color name="Cr_FFD9D9D9">#FFD9D9D9</color>
+    <color name="Cr_FFF6F6F6">#FFF6F6F6</color>
+    <color name="Cr_D8FFFFFF">#D8FFFFFF</color>
+    <color name="Cr_FFEEEEEE">#FFEEEEEE</color>
 </resources>

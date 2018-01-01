@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        icon="@drawable/select_menu_home"
+        id="@+id/tab_home"
+        title="首页" />
+    <tab
+        icon="@drawable/select_menu_monitor"
+        id="@+id/tab_monitor"
+        title="监控" />
+    <tab
+        icon="@drawable/select_menu_order"
+        id="@+id/tab_work"
+        title="工作管理" />
+    <tab
+        icon="@drawable/select_menu_app"
+        id="@+id/tab_app"
+        title="应用" />
+</tabs>
