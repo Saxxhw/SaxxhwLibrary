@@ -10,6 +10,7 @@ import com.kaopiz.kprogresshud.KProgressHUD
 import com.saxxhw.library.R
 import com.saxxhw.library.util.AtyManagerUtil
 import com.saxxhw.library.widget.state.StateLayout
+import kotlinx.android.synthetic.main.include_toolbar.*
 import java.lang.IllegalArgumentException
 
 /**
@@ -57,12 +58,23 @@ abstract class BaseActivity : AppCompatActivity() {
         mToolBar = findViewById(R.id.toolbar)
         if (null != mToolBar) {
             setSupportActionBar(mToolBar)
+            title = title
             if (!hideBackButton()) {
                 supportActionBar?.setHomeButtonEnabled(true)
                 supportActionBar?.setDisplayHomeAsUpEnabled(true)
                 mToolBar?.setNavigationOnClickListener { onBackPressed() }
             }
         }
+    }
+
+    override fun setTitle(title: CharSequence?) {
+        super.setTitle(null)
+        toolbarTitle.text = title
+    }
+
+    override fun setTitle(titleId: Int) {
+        super.setTitle(null)
+        toolbarTitle.setText(titleId)
     }
 
     /**

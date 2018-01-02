@@ -7,15 +7,7 @@ class MainActivity : BaseActivity() {
 
     override fun getLayout(): Int = R.layout.activity_main
 
-    override fun getBundleExtras(extras: Bundle) {
-
-    }
-
     override fun initEventAndData(savedInstanceState: Bundle?) {
-
-    }
-
-    override fun bindListener() {
 
     }
 }
