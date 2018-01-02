@@ -12,7 +12,6 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.saxxhw.library.R;
-import com.saxxhw.library.widget.state.StateLayout;
 
 import java.util.ArrayList;
 import java.util.Collections;

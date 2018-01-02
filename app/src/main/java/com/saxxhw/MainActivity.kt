@@ -3,7 +3,7 @@ package com.saxxhw
 import android.os.Bundle
 import android.support.v7.widget.Toolbar
 import com.saxxhw.library.base.BaseActivity
-import com.saxxhw.library.widget.state.StateLayout
+import com.saxxhw.library.state.StateLayout
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
 

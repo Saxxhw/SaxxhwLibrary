@@ -9,7 +9,7 @@ import com.kaopiz.kprogresshud.KProgressHUD
 
 import com.saxxhw.library.R
 import com.saxxhw.library.util.AtyManagerUtil
-import com.saxxhw.library.widget.state.StateLayout
+import com.saxxhw.library.state.StateLayout
 import kotlinx.android.synthetic.main.include_toolbar.*
 import java.lang.IllegalArgumentException
 

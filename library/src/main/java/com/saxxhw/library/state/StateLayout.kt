@@ -1,4 +1,4 @@
-package com.saxxhw.library.widget.state
+package com.saxxhw.library.state
 
 import android.view.View
 

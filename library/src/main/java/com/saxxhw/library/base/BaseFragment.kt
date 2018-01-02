@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.kaopiz.kprogresshud.KProgressHUD
-import com.saxxhw.library.widget.state.StateLayout
+import com.saxxhw.library.state.StateLayout
 import java.lang.IllegalArgumentException
 import java.lang.RuntimeException
 
