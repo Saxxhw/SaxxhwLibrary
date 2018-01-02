@@ -45,22 +45,22 @@ public class DropDownMenu extends LinearLayout {
     private int current_tab_position = -1;
 
     //分割线颜色
-    private int dividerColor = 0xffcccccc;
+    private int dividerColor = 0x00000000;
     //tab选中颜色
-    private int textSelectedColor = 0xff890c85;
+    private int textSelectedColor = 0xFF008EFF;
     //tab未选中颜色
-    private int textUnselectedColor = 0xff111111;
+    private int textUnselectedColor = 0xFF444445;
     //遮罩颜色
     private int maskColor = 0x88888888;
     //tab字体大小
     private int menuTextSize = 14;
 
     //tab选中图标
-    private int menuSelectedIcon;
+    private int menuSelectedIcon = R.mipmap.drop_down_selected_icon;
     //tab未选中图标
-    private int menuUnselectedIcon;
+    private int menuUnselectedIcon = R.mipmap.drop_down_unselected_icon;
 
-    private float menuHeighPercent = 0.5f;
+    private float menuHeightPercent = 0.5f;
 
 
     public DropDownMenu(Context context) {
@@ -78,7 +78,7 @@ public class DropDownMenu extends LinearLayout {
 
         //为DropDownMenu添加自定义属性
         int menuBackgroundColor = 0xffffffff;
-        int underlineColor = 0xffcccccc;
+        int underlineColor = 0xffeeeeee;
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.DropDownMenu);
         underlineColor = a.getColor(R.styleable.DropDownMenu_ddunderlineColor, underlineColor);
         dividerColor = a.getColor(R.styleable.DropDownMenu_dddividerColor, dividerColor);
@@ -89,7 +89,7 @@ public class DropDownMenu extends LinearLayout {
         menuTextSize = a.getDimensionPixelSize(R.styleable.DropDownMenu_ddmenuTextSize, menuTextSize);
         menuSelectedIcon = a.getResourceId(R.styleable.DropDownMenu_ddmenuSelectedIcon, menuSelectedIcon);
         menuUnselectedIcon = a.getResourceId(R.styleable.DropDownMenu_ddmenuUnselectedIcon, menuUnselectedIcon);
-        menuHeighPercent = a.getFloat(R.styleable.DropDownMenu_ddmenuMenuHeightPercent, menuHeighPercent);
+        menuHeightPercent = a.getFloat(R.styleable.DropDownMenu_ddmenuMenuHeightPercent, menuHeightPercent);
         a.recycle();
 
         //初始化tabMenuView并添加到tabMenuView
@@ -144,7 +144,7 @@ public class DropDownMenu extends LinearLayout {
         }
 
         popupMenuViews = new FrameLayout(getContext());
-        popupMenuViews.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) (getScreenSize(getContext()).y * menuHeighPercent)));
+        popupMenuViews.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) (getScreenSize(getContext()).y * menuHeightPercent)));
         popupMenuViews.setVisibility(GONE);
         containerView.addView(popupMenuViews, 1);
 
