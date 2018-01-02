@@ -15,5 +15,5 @@ interface StateLayout {
 
     fun showEmpty(emptyTextTitle: String?, emptyTextContent: String?, onEmptyClickListener: View.OnClickListener)
 
-    fun showError(errorTextTitle: String, errorTextContent: String)
+    fun showError(errorTextTitle: String, errorTextContent: String, onErrorClickListener: View.OnClickListener)
 }

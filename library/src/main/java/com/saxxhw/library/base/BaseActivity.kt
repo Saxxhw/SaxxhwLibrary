@@ -51,22 +51,6 @@ abstract class BaseActivity : AppCompatActivity() {
         AtyManagerUtil.instance.removeActivity(this)
     }
 
-    /**
-     * 初始化标题栏控件
-     */
-    open fun initToolBar() {
-        mToolBar = findViewById(R.id.toolbar)
-        if (null != mToolBar) {
-            setSupportActionBar(mToolBar)
-            title = title
-            if (!hideBackButton()) {
-                supportActionBar?.setHomeButtonEnabled(true)
-                supportActionBar?.setDisplayHomeAsUpEnabled(true)
-                mToolBar?.setNavigationOnClickListener { onBackPressed() }
-            }
-        }
-    }
-
     override fun setTitle(title: CharSequence?) {
         super.setTitle(null)
         toolbarTitle.text = title
@@ -75,6 +59,22 @@ abstract class BaseActivity : AppCompatActivity() {
     override fun setTitle(titleId: Int) {
         super.setTitle(null)
         toolbarTitle.setText(titleId)
+    }
+
+    /**
+     * 初始化标题栏控件
+     */
+    private fun initToolBar() {
+        mToolBar = findViewById(R.id.toolbar)
+        if (null != mToolBar) {
+            setSupportActionBar(mToolBar)
+            title = title
+            if (!hideBackButton()) {
+                supportActionBar?.setHomeButtonEnabled(true)
+                supportActionBar?.setDisplayHomeAsUpEnabled(true)
+                setNavigation(mToolBar)
+            }
+        }
     }
 
     /**
@@ -122,7 +122,7 @@ abstract class BaseActivity : AppCompatActivity() {
         if (null == mStateLayout) {
             throw IllegalArgumentException("You must return a right target view for loading")
         }
-        mStateLayout?.showEmpty(null, null, View.OnClickListener { })
+        mStateLayout?.showEmpty(null, null, View.OnClickListener { onRetrieve() })
     }
 
     /**
@@ -132,18 +132,24 @@ abstract class BaseActivity : AppCompatActivity() {
         if (null == mStateLayout) {
             throw IllegalArgumentException("You must return a right target view for loading")
         }
-        mStateLayout?.showError("", "")
+        mStateLayout?.showError("", "", View.OnClickListener { onRetrieve() })
     }
 
     protected abstract fun getLayout(): Int
 
+    protected abstract fun initEventAndData(savedInstanceState: Bundle?)
+
     open fun getStateLayout(): StateLayout? = null
 
-    protected abstract fun initEventAndData(savedInstanceState: Bundle?)
+    open fun setNavigation(mToolBar: Toolbar?) {
+        mToolBar?.setNavigationOnClickListener { onBackPressed() }
+    }
 
     open fun getBundleExtras(extras: Bundle) {}
 
     open fun bindListener() {}
 
     open fun hideBackButton(): Boolean = false
+
+    open fun onRetrieve() {}
 }

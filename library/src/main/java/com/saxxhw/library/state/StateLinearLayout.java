@@ -111,8 +111,8 @@ public class StateLinearLayout extends LinearLayout implements StateLayout {
      * @param errorTextContent Content of the error view to show
      */
     @Override
-    public void showError(String errorTextTitle, String errorTextContent) {
-        switchState(ERROR, errorTextTitle, errorTextContent, null, Collections.<Integer>emptyList());
+    public void showError(String errorTextTitle, String errorTextContent, OnClickListener onClickListener) {
+        switchState(ERROR, errorTextTitle, errorTextContent, onClickListener, Collections.<Integer>emptyList());
     }
 
     /**
@@ -176,12 +176,14 @@ public class StateLinearLayout extends LinearLayout implements StateLayout {
 
                 emptyStateTitleTextView.setText(!TextUtils.isEmpty(errorText) ? errorText : getContext().getText(R.string.state_empty_message));
                 emptyStateContentTextView.setText(!TextUtils.isEmpty(errorTextContent) ? errorTextContent : getContext().getText(R.string.state_empty_desc));
+                emptyStateLinearLayout.setOnClickListener(onClickListener);
                 break;
             case ERROR:
                 setErrorState(skipIds);
 
                 errorStateTitleTextView.setText(R.string.state_error_message);
                 errorStateContentTextView.setText(R.string.state_error_desc);
+                errorStateLinearLayout.setOnClickListener(onClickListener);
                 break;
         }
     }

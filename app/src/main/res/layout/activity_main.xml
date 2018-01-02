@@ -7,4 +7,9 @@
     tools:context="com.saxxhw.MainActivity">
 
     <include layout="@layout/include_toolbar" />
+
+    <com.saxxhw.library.state.StateFrameLayout
+        android:id="@+id/stateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </LinearLayout>

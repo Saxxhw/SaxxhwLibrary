@@ -98,7 +98,7 @@ abstract class BaseFragment : Fragment() {
         if (null == mStateLayout) {
             throw IllegalArgumentException("You must return a right target view for loading")
         }
-        mStateLayout?.showEmpty(null, null, View.OnClickListener { })
+        mStateLayout?.showEmpty(null, null, View.OnClickListener { onRetrieve() })
     }
 
     /**
@@ -108,14 +108,16 @@ abstract class BaseFragment : Fragment() {
         if (null == mStateLayout) {
             throw IllegalArgumentException("You must return a right target view for loading")
         }
-        mStateLayout?.showError("", "")
+        mStateLayout?.showError("", "", View.OnClickListener { onRetrieve() })
     }
 
     protected abstract fun getLayout(): Int
 
-    open fun getStateLayout(): StateLayout? = null
-
     protected abstract fun initEventAndData()
 
+    open fun getStateLayout(): StateLayout? = null
+
     open fun bindListener() {}
+
+    open fun onRetrieve() {}
 }
