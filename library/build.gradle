@@ -65,7 +65,7 @@ dependencies {
     compile 'it.sephiroth.android.library.imagezoom:library:1.0.4'
     // 环信
     compile files('libs/hyphenatechat_3.3.7.jar')
-    implementation 'com.parse:parse-android:1.13.1'
+    compile 'com.parse:parse-android:1.13.1'
 }
 
 apply plugin: 'com.github.dcendents.android-maven'

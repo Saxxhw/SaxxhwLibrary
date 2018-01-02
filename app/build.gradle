@@ -25,5 +25,6 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation project(':library')
+//    implementation project(':library')
+    implementation 'com.github.Saxxhw:SaxxhwLibrary:1.0.8'
 }
