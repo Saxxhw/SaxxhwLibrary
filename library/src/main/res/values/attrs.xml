@@ -10,7 +10,6 @@
     </declare-styleable>
 
     <declare-styleable name="BottomNavigationBar">
-        <attr name="bb_centerSrc" format="reference" />
         <attr name="bb_tabXmlResource" format="reference" />
     </declare-styleable>
 

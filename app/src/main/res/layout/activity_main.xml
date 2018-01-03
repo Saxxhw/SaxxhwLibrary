@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#eeeeee"
     tools:context="com.saxxhw.MainActivity">
 
     <include layout="@layout/include_toolbar" />
 
-    <com.saxxhw.library.state.StateFrameLayout
-        android:id="@+id/stateLayout"
+    <com.saxxhw.library.widget.BottomNavigationBar
+        android:id="@+id/bottomMenu"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        app:bb_tabXmlResource="@xml/bottombar_tabs_color_changing"/>
+</FrameLayout>
