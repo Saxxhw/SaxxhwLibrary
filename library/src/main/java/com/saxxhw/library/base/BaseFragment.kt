@@ -23,10 +23,7 @@ abstract class BaseFragment : Fragment() {
     // 加载对话框
     private var mProgressDialog: KProgressHUD? = null
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(getLayout(), null)
-    }
-
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? = inflater.inflate(getLayout(), null)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -35,7 +32,7 @@ abstract class BaseFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        initEventAndData()
+        initEventAndData(savedInstanceState)
         bindListener()
     }
 
@@ -113,7 +110,7 @@ abstract class BaseFragment : Fragment() {
 
     protected abstract fun getLayout(): Int
 
-    protected abstract fun initEventAndData()
+    protected abstract fun initEventAndData(savedInstanceState: Bundle?)
 
     open fun getStateLayout(): StateLayout? = null
 
