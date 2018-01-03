@@ -5,6 +5,7 @@ import android.os.Handler
 import android.support.v7.widget.Toolbar
 import android.view.View
 import com.saxxhw.library.base.BaseActivity
+import com.saxxhw.library.util.AtyManagerUtil
 import com.saxxhw.library.widget.BottomNavigationBar
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
@@ -29,7 +30,7 @@ class MainActivity : BaseActivity(), BottomNavigationBar.MenuItemClickListener {
     override fun onItemClick(view: View) {
         when (view.id) {
             R.id.tab_recharge -> toast("充值")
-            R.id.tab_repair -> toast("报修")
+            R.id.tab_repair -> AtyManagerUtil.instance.finishActivity(this)
         }
     }
 }

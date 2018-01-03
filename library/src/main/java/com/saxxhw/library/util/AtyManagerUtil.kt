@@ -63,8 +63,13 @@ class AtyManagerUtil {
      * 结束全部Activity
      */
     fun finishAllActivities() {
-        mActivities.forEach {
-            finishActivity(it)
+        var i = mActivities.size - 1
+        while (i > -1) {
+            val activity = mActivities[i]
+            mActivities.remove(activity)
+            activity.finish()
+            i = mActivities.size
+            i--
         }
     }
 
