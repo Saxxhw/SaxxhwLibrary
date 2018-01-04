@@ -38,6 +38,14 @@ abstract class BaseFragment : Fragment() {
         bindListener()
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val bundle = arguments
+        if (bundle != null) {
+            getBundleExtras(bundle)
+        }
+    }
+
     override fun onDetach() {
         super.onDetach()
         // for bug ---> java.lang.IllegalStateException: Activity has been destroyed
@@ -115,6 +123,8 @@ abstract class BaseFragment : Fragment() {
     protected abstract fun initEventAndData(savedInstanceState: Bundle?)
 
     open fun getStateLayout(): StateLayout? = null
+
+    open fun getBundleExtras(extras: Bundle) {}
 
     open fun bindListener() {}
 
