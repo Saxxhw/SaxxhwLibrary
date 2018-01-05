@@ -81,11 +81,11 @@ class BottomNavigationBar : LinearLayout {
                     relativeLayout.setOnClickListener {
                         val cb = cbArray[index]
                         if (cb.setChecked()) {
-                            menuItemClickListener?.onItemClick(cb)
+                            menuItemClickListener?.onItemClick(cb, cb.text.toString())
                         }
                     }
                 }
-        ivCenter.setOnClickListener { menuItemClickListener?.onItemClick(ivCenter) }
+        ivCenter.setOnClickListener { menuItemClickListener?.onItemClick(ivCenter, null) }
         rlyt1.performClick()
     }
 
@@ -176,7 +176,7 @@ class BottomNavigationBar : LinearLayout {
      * 监控事件
      */
     interface MenuItemClickListener {
-        fun onItemClick(view: View)
+        fun onItemClick(view: View, text: String?)
     }
 
     class TabParserException : RuntimeException()
