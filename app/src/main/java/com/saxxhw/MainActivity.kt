@@ -7,30 +7,31 @@ import android.view.View
 import com.saxxhw.library.base.BaseActivity
 import com.saxxhw.library.util.AtyManagerUtil
 import com.saxxhw.library.widget.BottomNavigationBar
+import com.saxxhw.library.widget.PartsEntity
+import com.saxxhw.library.widget.PartsSelectView
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
 
-class MainActivity : BaseActivity(), BottomNavigationBar.MenuItemClickListener {
+class MainActivity : BaseActivity(), PartsSelectView.ItemClickListener {
+
 
     override fun getLayout(): Int = R.layout.activity_main
 
     override fun initEventAndData(savedInstanceState: Bundle?) {
-        Handler().postDelayed({ bottomMenu.setXmlResource(R.xml.bottombar_tabs_color_changing2) }, 1000 * 12)
+        parts.setImageUrl(R.mipmap.test_repair)
+        parts.addParts(listOf(
+                PartsEntity("1", "部件1", false),
+                PartsEntity("2", "部件2", false),
+                PartsEntity("3", "部件3", false),
+                PartsEntity("4", "部件4", false)
+        ))
     }
 
     override fun bindListener() {
-        bottomMenu.setOnMenuItemClickListener(this)
+        parts.setOnItemClickListener(this)
     }
 
-    override fun setNavigation(mToolBar: Toolbar?) {
-        mToolBar?.setNavigationIcon(R.mipmap.ic_menu_personal_center)
-        mToolBar?.setNavigationOnClickListener { toast("个人中心") }
-    }
-
-    override fun onItemClick(view: View) {
-        when (view.id) {
-            R.id.tab_recharge -> toast("充值")
-            R.id.tab_repair -> AtyManagerUtil.instance.finishActivity(this)
-        }
+    override fun onItemClick(position: Int) {
+        println(position)
     }
 }
