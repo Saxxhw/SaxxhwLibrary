@@ -309,7 +309,7 @@ public class EaseInitHelper {
                 Intent intent = new Intent(appContext, chatActivityClass);
                 Bundle bundle = new Bundle();
                 bundle.putString(CHAT_GROUP_ID, message.getTo());
-                bundle.putString(ORDER_CODE, message.getStringAttribute(ORDER_CODE, ""));
+                bundle.putString(ORDER_CODE, message.getStringAttribute(ORDER_CODE, message.getStringAttribute(EaseConstant.ORDER_CODE, "")));
                 intent.putExtras(bundle);
                 return intent;
             }
