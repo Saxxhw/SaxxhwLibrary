@@ -146,11 +146,15 @@ public abstract class EaseChatRow extends LinearLayout {
         }
         if (userAvatarView != null) {
             //set nickname and avatar
+            String avatar = message.getStringAttribute(EaseConstant.CHAT_AVATAR, "");
             if (message.direct() == Direct.SEND) {
-                GlideApp.with(context).load(message.getStringAttribute(EaseConstant.CHAT_AVATAR, "")).into(userAvatarView);
+                GlideApp.with(context).load(avatar).into(userAvatarView);
             } else {
-                GlideApp.with(context).load(message.getStringAttribute(EaseConstant.CHAT_AVATAR, "")).into(userAvatarView);
-                usernickView.setText(message.getStringAttribute(EaseConstant.CHAT_NICK_NAME, ""));
+                String nickname = message.getStringAttribute(EaseConstant.CHAT_NICK_NAME, "");
+                GlideApp.with(context).load(avatar).into(userAvatarView);
+                usernickView.setText(nickname);
+                System.out.println("****************************** " + avatar);
+                System.out.println("****************************** " + nickname);
             }
         }
         if (EMClient.getInstance().getOptions().getRequireDeliveryAck()) {
