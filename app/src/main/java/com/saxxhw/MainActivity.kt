@@ -14,7 +14,6 @@ import org.jetbrains.anko.toast
 
 class MainActivity : BaseActivity(), PartsSelectView.ItemClickListener {
 
-
     override fun getLayout(): Int = R.layout.activity_main
 
     override fun initEventAndData(savedInstanceState: Bundle?) {
@@ -31,7 +30,7 @@ class MainActivity : BaseActivity(), PartsSelectView.ItemClickListener {
         parts.setOnItemClickListener(this)
     }
 
-    override fun onItemClick(position: Int) {
-        println(position)
+    override fun onItemClick(position: Int, parts: PartsEntity) {
+
     }
 }
