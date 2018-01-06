@@ -115,7 +115,7 @@ class SelectPictureView @JvmOverloads constructor(context: Context, attrs: Attri
         if (!showAdd) {
             return
         }
-        val size = addPicAdapter.count
+        val size = addPicAdapter.list.size
         if (size < maxValue && position == size) {
             if (null != pictureSelectListener) {
                 pictureSelectListener?.onPictureSelect()

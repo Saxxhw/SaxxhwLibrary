@@ -1,36 +1,49 @@
 package com.saxxhw
 
+import android.app.Activity
+import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
-import android.os.Handler
-import android.support.v7.widget.Toolbar
-import android.view.View
 import com.saxxhw.library.base.BaseActivity
-import com.saxxhw.library.util.AtyManagerUtil
-import com.saxxhw.library.widget.BottomNavigationBar
-import com.saxxhw.library.widget.PartsEntity
-import com.saxxhw.library.widget.PartsSelectView
+import com.saxxhw.library.glide.GlideEngine
+import com.saxxhw.library.widget.SelectPictureView
+import com.zhihu.matisse.Matisse
+import com.zhihu.matisse.MimeType
+import com.zhihu.matisse.internal.entity.CaptureStrategy
 import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.anko.toast
 
-class MainActivity : BaseActivity(), PartsSelectView.ItemClickListener {
+class MainActivity : BaseActivity(), SelectPictureView.onPictureSelectListener {
+
 
     override fun getLayout(): Int = R.layout.activity_main
 
     override fun initEventAndData(savedInstanceState: Bundle?) {
-        parts.setImageUrl(R.mipmap.test_repair)
-        parts.addParts(listOf(
-                PartsEntity("1", "部件1", false),
-                PartsEntity("2", "部件2", false),
-                PartsEntity("3", "部件3", false),
-                PartsEntity("4", "部件4", false)
-        ))
+
     }
 
     override fun bindListener() {
-        parts.setOnItemClickListener(this)
+        add.setOnPictureSelectListener(this)
     }
 
-    override fun onItemClick(position: Int, parts: PartsEntity) {
+    override fun onPictureSelect() {
+        Matisse.from(this)
+                .choose(MimeType.ofImage())
+                .countable(true)
+                .capture(true)
+                .captureStrategy(CaptureStrategy(true, "com.saxxhw.fileprovider"))
+                .maxSelectable(add.missingCount)
+                .restrictOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
+                .thumbnailScale(0.85f)
+                .imageEngine(GlideEngine())
+                .forResult(12)
+    }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == Activity.RESULT_OK) {
+            when (requestCode) {
+                12 -> add.setData(Matisse.obtainPathResult(data))
+            }
+        }
     }
 }
