@@ -31,6 +31,17 @@
         <attr name="ddmenuMenuHeightPercent" format="float" />
     </declare-styleable>
 
+    <declare-styleable name="TextClock">
+        <attr name="format12Hour" format="string" />
+        <attr name="format24Hour" format="string" />
+        <attr name="timeZone" format="string" />
+        <attr name="forceUse">
+            <enum name="format12" value="0" />
+            <enum name="format24" value="1" />
+            <enum name="formatAuto" value="2" />
+        </attr>
+    </declare-styleable>
+
     <!-- ######################### 环信相关 ######################### -->
     <declare-styleable name="EaseChatMessageList">
         <attr name="msgListMyBubbleBackground" format="reference" />

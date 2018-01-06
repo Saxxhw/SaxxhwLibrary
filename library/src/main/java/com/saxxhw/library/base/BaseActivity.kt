@@ -8,8 +8,8 @@ import android.view.View
 import com.kaopiz.kprogresshud.KProgressHUD
 
 import com.saxxhw.library.R
-import com.saxxhw.library.util.AtyManagerUtil
 import com.saxxhw.library.state.StateLayout
+import com.saxxhw.library.util.AtyManagerUtil
 import kotlinx.android.synthetic.main.include_toolbar.*
 import java.lang.IllegalArgumentException
 
@@ -32,7 +32,7 @@ abstract class BaseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(getLayout())
         initToolBar()
-        AtyManagerUtil.instance.addActivity(this)
+        AtyManagerUtil.getInstance().addActivity(this)
         val extras = intent.extras
         if (null != extras) {
             getBundleExtras(extras)
@@ -48,7 +48,7 @@ abstract class BaseActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        AtyManagerUtil.instance.removeActivity(this)
+        AtyManagerUtil.getInstance().removeActivity(this)
     }
 
     override fun setTitle(title: CharSequence?) {
