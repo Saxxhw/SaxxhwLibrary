@@ -46,7 +46,12 @@ public class EaseConstant {
     public static final String ACTION_GROUP_CHANAGED = "action_group_changed";
     public static final String ACTION_CONTACT_CHANAGED = "action_contact_changed";
 
-    public static final String CHAT_AVATAR = "CHAT_AVATAR";
-    public static final String CHAT_NICK_NAME = "CHAT_NICK_NAME";
+    // 群组id
+    public static final String CHAT_GROUP_ID = "CHAT_GROUP_ID";
+    // 工单code
     public static final String ORDER_CODE = "ORDER_CODE";
+    // 头像
+    public static final String CHAT_AVATAR = "CHAT_AVATAR";
+    // 昵称
+    public static final String CHAT_NICK_NAME = "CHAT_NICK_NAME";
 }

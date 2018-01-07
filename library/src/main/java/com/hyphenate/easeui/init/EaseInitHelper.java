@@ -121,8 +121,6 @@ public class EaseInitHelper {
     private Class<?> mainActivityClass;
     // 聊天界面
     private Class<?> chatActivityClass;
-    public static final String CHAT_GROUP_ID = "CHAT_GROUP_ID";
-    public static final String ORDER_CODE = "ORDER_CODE";
 
     private EaseInitHelper() {
         executor = Executors.newCachedThreadPool();
@@ -308,8 +306,8 @@ public class EaseInitHelper {
             public Intent getLaunchIntent(EMMessage message) {
                 Intent intent = new Intent(appContext, chatActivityClass);
                 Bundle bundle = new Bundle();
-                bundle.putString(CHAT_GROUP_ID, message.getTo());
-                bundle.putString(ORDER_CODE, message.getStringAttribute(ORDER_CODE, message.getStringAttribute(EaseConstant.ORDER_CODE, "")));
+                bundle.putString(EaseConstant.CHAT_GROUP_ID, message.getTo());
+                bundle.putString(EaseConstant.ORDER_CODE, message.getStringAttribute(EaseConstant.ORDER_CODE, message.getStringAttribute(EaseConstant.ORDER_CODE, "")));
                 intent.putExtras(bundle);
                 return intent;
             }
