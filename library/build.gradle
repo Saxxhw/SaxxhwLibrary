@@ -9,8 +9,8 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 27
-        versionCode 23
-        versionName "1.2.3"
+        versionCode 24
+        versionName "1.2.4"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
@@ -66,7 +66,7 @@ dependencies {
     compile 'it.sephiroth.android.library.imagezoom:library:1.0.4'
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
     // 环信
-    compile files('libs/hyphenatechat_3.3.7.jar')
+    compile files('libs/hyphenatechat_3.3.9.jar')
     compile 'com.parse:parse-android:1.13.1'
 }
 
